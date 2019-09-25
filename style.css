@@ -1,0 +1,15 @@
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 10px 0;
+}
+
+.project .preview {
+  max-height: 200px;
+  overflow: hidden;
+  border: 10px solid #666;
+}
+
+.project .preview a img {
+  width: 400px;
+}
