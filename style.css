@@ -114,3 +114,34 @@ header a:hover {
   background: rgb(255, 255, 255, 0.7);
   text-shadow: none;
 }
+
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  header .logo {
+    font-size: 3rem;
+    padding: 0 0 25px 0;
+  }
+  header .main-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .main-menu .link {
+    padding: 0;
+  }
+  .project .preview,
+  .project .info {
+    width: 100%;
+  }
+  .project .preview {
+    margin-bottom: 20px;
+  }
+  .project .preview a img {
+    height: auto;
+    width: 100%;
+  }
+}
