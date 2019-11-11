@@ -2,47 +2,41 @@
 html {
   font-family: Helvetica, sans-serif;
   font-size: 62.5%;
-  background: slategray;
+  background: #111;
 }
 a {
   text-decoration: none;
   color: lightsalmon;
   transition: color 0.5s ease;
 }
-
 a:hover {
   color: black;
   transition: color 0.5s ease-in-out;
 }
 /* header */
 .container {
-  max-width: 768px;
   margin: 0 auto;
   padding: 20px 0;
   font-size: 1.6rem;
 }
-
-header {
+.container header {
   display: flex;
   justify-content: space-between;
-  background: rgb(80, 90, 100);
+  background: #505a64;
   padding: 20px 0;
   border-radius: 10px;
   margin: 0 0 10px 0;
 }
-
-header a {
+.container header a {
   color: lightsalmon;
   text-shadow: #000 1px 1px 3px;
   font-size: 1.8rem;
   transition: all 0.5s;
 }
-
-header a:hover {
+.container header a:hover {
   color: white;
 }
-
-.logo {
+.container .logo {
   font-family: verdana;
   font-size: 3rem;
   letter-spacing: 2px;
@@ -50,75 +44,62 @@ header a:hover {
   color: lightsalmon;
   text-shadow: #000 1px 1px 0;
 }
-
-.main-menu {
+.container .main-menu {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-
-.main-menu .link {
+.container .main-menu .link {
   padding: 0 30px 0 0;
 }
-
-.project {
+.container .project {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0 0 10px 0;
-  background: rgb(80, 90, 100);
+  background: #505a64;
   border-radius: 10px;
   padding: 10px;
 }
-
-.project h2 {
+.container .project h2 {
   font-size: 3rem;
   padding: 0 0 1.5rem 0;
 }
-
-.project .welcome {
+.container .project .welcome {
   color: white;
   text-shadow: #000 2px 2px 4px;
   font-size: 1.8rem;
   line-height: 2.7rem;
 }
-
-.project .welcome .link:hover {
+.container .project .welcome .link:hover {
   color: white;
 }
-
-.project .preview {
-  max-height: 200px;
+.container .project .preview {
+  height: 200px;
   overflow: hidden;
   border-radius: 10px;
-  width: 50%;
 }
-
-.project .preview a img {
-  width: 400px;
+.container .project .preview a img {
+  width: auto;
 }
-.project .info {
+.container .project .info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 50%;
   padding: 0 0 0 10px;
   box-sizing: border-box;
 }
-
-.project .info .title {
+.container .project .info .title {
   font-size: 2rem;
   color: white;
   text-shadow: #000 2px 2px 3px;
 }
-
-.project .info .desc {
+.container .project .info .desc {
   color: white;
   font-size: 1.7rem;
   text-shadow: #000 1px 1px 2px;
   line-height: 2rem;
 }
-
-.project .info a {
+.container .project .info a {
   display: inline-block;
   padding: 8px;
   border-radius: 5px;
@@ -126,38 +107,7 @@ header a:hover {
   transition: all 0.5s;
   text-shadow: #000 1px 1px 3px;
 }
-
-.project .info a:hover {
-  background: rgb(255, 255, 255, 0.7);
+.container .project .info a:hover {
+  background: #ffffff;
   text-shadow: none;
-}
-
-@media (max-width: 500px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
-  header .logo {
-    padding: 0 0 25px 0;
-  }
-  header .main-menu {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  .main-menu .link {
-    padding: 0;
-  }
-  .project .preview,
-  .project .info {
-    width: 100%;
-  }
-  .project .preview {
-    margin-bottom: 20px;
-  }
-  .project .preview a img {
-    height: auto;
-    width: 100%;
-  }
 }

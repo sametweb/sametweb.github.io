@@ -1,0 +1,121 @@
+/* global */
+
+@tablet: ~"(max-width:768px)";
+@phone: ~"(max-width:500px)";
+
+html {
+  font-family: Helvetica, sans-serif;
+  font-size: 62.5%;
+  background: #111;
+}
+a {
+  text-decoration: none;
+  color: lightsalmon;
+  transition: color 0.5s ease;
+}
+
+a:hover {
+  color: black;
+  transition: color 0.5s ease-in-out;
+}
+/* header */
+.container {
+  margin: 0 auto;
+  padding: 20px 0;
+  font-size: 1.6rem;
+  header {
+    display: flex;
+    justify-content: space-between;
+    background: rgb(80, 90, 100);
+    padding: 20px 0;
+    border-radius: 10px;
+    margin: 0 0 10px 0;
+    a {
+      color: lightsalmon;
+      text-shadow: #000 1px 1px 3px;
+      font-size: 1.8rem;
+      transition: all 0.5s;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+  .logo {
+    font-family: verdana;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    padding: 0 0 0 20px;
+    color: lightsalmon;
+    text-shadow: #000 1px 1px 0;
+  }
+
+  .main-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .link {
+      padding: 0 30px 0 0;
+    }
+  }
+  .project {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+    background: rgb(80, 90, 100);
+    border-radius: 10px;
+    padding: 10px;
+    h2 {
+      font-size: 3rem;
+      padding: 0 0 1.5rem 0;
+    }
+    .welcome {
+      color: white;
+      text-shadow: #000 2px 2px 4px;
+      font-size: 1.8rem;
+      line-height: 2.7rem;
+      .link:hover {
+        color: white;
+      }
+    }
+    .preview {
+      height: 200px;
+      overflow: hidden;
+      border-radius: 10px;
+      a {
+        img {
+          width: auto;
+        }
+      }
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0 0 0 10px;
+      box-sizing: border-box;
+      .title {
+        font-size: 2rem;
+        color: white;
+        text-shadow: #000 2px 2px 3px;
+      }
+      .desc {
+        color: white;
+        font-size: 1.7rem;
+        text-shadow: #000 1px 1px 2px;
+        line-height: 2rem;
+      }
+      a {
+        display: inline-block;
+        padding: 8px;
+        border-radius: 5px;
+        align-self: flex-end;
+        transition: all 0.5s;
+        text-shadow: #000 1px 1px 3px;
+        &:hover {
+          background: rgb(255, 255, 255, 0.7);
+          text-shadow: none;
+        }
+      }
+    }
+  }
+}
