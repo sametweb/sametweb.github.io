@@ -1,113 +1,112 @@
 /* global */
+* {
+  box-sizing: border-box;
+}
 html {
   font-family: Helvetica, sans-serif;
   font-size: 62.5%;
-  background: #111;
+  background: #dadada;
 }
 a {
   text-decoration: none;
-  color: lightsalmon;
+  color: black;
   transition: color 0.5s ease;
 }
 a:hover {
-  color: black;
   transition: color 0.5s ease-in-out;
 }
 /* header */
-.container {
-  margin: 0 auto;
-  padding: 20px 0;
-  font-size: 1.6rem;
+header {
+  background: coral;
 }
-.container header {
+header .header {
+  width: 900px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+header .header .logo {
   display: flex;
   justify-content: space-between;
-  background: #505a64;
+  align-items: center;
   padding: 20px 0;
-  border-radius: 10px;
-  margin: 0 0 10px 0;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
 }
-.container header a {
-  color: lightsalmon;
-  text-shadow: #000 1px 1px 3px;
-  font-size: 1.8rem;
-  transition: all 0.5s;
-}
-.container header a:hover {
-  color: white;
-}
-.container .logo {
-  font-family: verdana;
+header .header .logo h1 {
   font-size: 3rem;
   letter-spacing: 2px;
-  padding: 0 0 0 20px;
-  color: lightsalmon;
-  text-shadow: #000 1px 1px 0;
+  color: black;
 }
-.container .main-menu {
+header .header .logo .main-menu {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.container .main-menu .link {
-  padding: 0 30px 0 0;
+header .header .logo .main-menu .link {
+  padding: 0 0 0 30px;
 }
-.container .project {
+header .header .welcome {
+  margin-bottom: 20px;
+}
+header .header .welcome .welcome-text {
   display: flex;
   justify-content: space-between;
-  margin: 0 0 10px 0;
-  background: #505a64;
-  border-radius: 10px;
-  padding: 10px;
+  align-items: center;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
 }
-.container .project h2 {
-  font-size: 3rem;
-  padding: 0 0 1.5rem 0;
+header .header .welcome .welcome-text .desc {
+  width: 65%;
 }
-.container .project .welcome {
-  color: white;
-  text-shadow: #000 2px 2px 4px;
-  font-size: 1.8rem;
-  line-height: 2.7rem;
+header .header .welcome .welcome-text .social {
+  font-size: 5rem;
+  color: rgba(0, 0, 0, 0.8);
 }
-.container .project .welcome .link:hover {
-  color: white;
+header .header .welcome .welcome-text .social i:hover {
+  color: black;
+  cursor: pointer;
 }
-.container .project .preview {
-  height: 200px;
-  overflow: hidden;
-  border-radius: 10px;
+.container {
+  width: 900px;
+  margin: 0 auto;
+  font-size: 1.6rem;
 }
-.container .project .preview a img {
-  width: auto;
+.container .projects {
+  display: flex;
+  flex-wrap: wrap;
 }
-.container .project .info {
+.container .projects .project {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 0 0 0 10px;
-  box-sizing: border-box;
+  justify-content: flex-start;
+  width: 32%;
+  margin: 0 18px 18px 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.05);
 }
-.container .project .info .title {
-  font-size: 2rem;
-  color: white;
-  text-shadow: #000 2px 2px 3px;
+.container .projects .project:nth-child(3n) {
+  margin-right: 0;
 }
-.container .project .info .desc {
-  color: white;
-  font-size: 1.7rem;
-  text-shadow: #000 1px 1px 2px;
+.container .projects .project img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.container .projects .project .info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 100%;
+}
+.container .projects .project .info .title {
+  font-size: 1.6rem;
+}
+.container .projects .project .info .desc {
+  font-size: 1.4rem;
   line-height: 2rem;
 }
-.container .project .info a {
+.container .projects .project .info a {
   display: inline-block;
-  padding: 8px;
-  border-radius: 5px;
-  align-self: flex-end;
-  transition: all 0.5s;
-  text-shadow: #000 1px 1px 3px;
-}
-.container .project .info a:hover {
-  background: #ffffff;
-  text-shadow: none;
+  transition: all 0.2s;
+  margin-top: auto;
 }
