@@ -109,17 +109,38 @@ header {
         height: 100%;
         .title {
           font-size: 1.6rem;
+          font-weight: bold;
+          line-height: 2.2rem;
         }
         .desc {
           font-size: 1.4rem;
           line-height: 2rem;
         }
         a {
-          display: inline-block;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
           transition: all 0.2s;
           margin-top: auto;
+          i {
+            font-size: 3rem;
+            padding: 0 6px 0 0;
+          }
+          span {
+            font-size: 1.8rem;
+          }
         }
       }
     }
   }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  background: #222;
+  font-size: 1.6rem;
+  padding: 50px;
+  color: white;
+  text-align: center;
 }
