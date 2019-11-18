@@ -65,12 +65,16 @@ header {
           width: 65%;
         }
         .social {
+          width: 27%;
+          display: flex;
+          justify-content: space-between;
           font-size: 5rem;
-          color: rgba(0, 0, 0, 0.8);
-          i {
-            &:hover {
-              color: black;
-              cursor: pointer;
+          a {
+            i {
+              color: rgba(0, 0, 0, 0.8);
+              &:hover {
+                color: black;
+              }
             }
           }
         }
@@ -123,6 +127,7 @@ header {
           width: 100%;
           transition: all 0.2s;
           margin-top: auto;
+          padding: 10px 0 0 0;
           i {
             font-size: 3rem;
             padding: 0 6px 0 0;
