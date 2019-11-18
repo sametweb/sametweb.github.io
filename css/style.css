@@ -35,8 +35,8 @@ header .header .logo {
 }
 header .header .logo h1 {
   font-size: 3rem;
-  letter-spacing: 2px;
   color: black;
+  font-family: "Courier New";
 }
 header .header .logo .main-menu {
   display: flex;
@@ -75,6 +75,12 @@ header .header .welcome .welcome-text .social a i:hover {
   width: 900px;
   margin: 0 auto;
   font-size: 1.6rem;
+}
+.container .section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 20px 0;
+  margin: 0 0 20px 0;
 }
 .container .projects {
   display: flex;
