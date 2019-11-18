@@ -64,6 +64,7 @@ const createSocialIcons = socialObject => {
   let iconStyles = socialObject.icon.split(" ");
 
   link.href = socialObject.link;
+  link.target = "_blank";
   link.title = `Samet Mutevelli ${socialObject.platform}`;
   icon.classList.add(...iconStyles);
 
