@@ -44,10 +44,10 @@ const createProject = projectObject => {
 
   github.appendChild(linkText);
   github.appendChild(icon);
+  info.appendChild(img);
   info.appendChild(title);
   info.appendChild(desc);
   info.appendChild(github);
-  project.appendChild(img);
   project.appendChild(info);
 
   return project;
