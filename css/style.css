@@ -91,9 +91,10 @@ header .header .welcome .welcome-text .social a i:hover {
   flex-direction: column;
   justify-content: flex-start;
   width: 32%;
-  margin: 0 18px 18px 0;
+  margin: 0 18px 60px 0;
   padding: 20px;
   background: rgba(0, 0, 0, 0.05);
+  box-shadow: #aaa 5px 10px 10px;
 }
 .container .projects .project:nth-child(3n) {
   margin-right: 0;
