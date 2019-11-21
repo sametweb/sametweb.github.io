@@ -25,6 +25,12 @@ header .header {
   margin: 0 auto;
   margin-bottom: 20px;
 }
+@media (max-width: 950px) {
+  header .header {
+    width: 100%;
+    padding: 0 20px 30px;
+  }
+}
 header .header .logo {
   display: flex;
   justify-content: space-between;
@@ -33,10 +39,20 @@ header .header .logo {
   font-size: 1.6rem;
   margin-bottom: 20px;
 }
+@media (max-width:768px) {
+  header .header .logo {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+}
 header .header .logo h1 {
   font-size: 3rem;
-  color: black;
   font-family: "Courier New";
+}
+@media (max-width:768px) {
+  header .header .logo h1 {
+    margin-bottom: 40px;
+  }
 }
 header .header .logo .main-menu {
   display: flex;
@@ -45,6 +61,11 @@ header .header .logo .main-menu {
 }
 header .header .logo .main-menu .link {
   padding: 0 0 0 30px;
+}
+@media (max-width:768px) {
+  header .header .logo .main-menu .link {
+    padding: 0 15px;
+  }
 }
 header .header .welcome {
   margin-bottom: 20px;
@@ -56,14 +77,38 @@ header .header .welcome .welcome-text {
   font-size: 1.6rem;
   line-height: 2.2rem;
 }
+@media (max-width:768px) {
+  header .header .welcome .welcome-text {
+    flex-direction: column-reverse;
+  }
+}
 header .header .welcome .welcome-text .desc {
   width: 65%;
+}
+@media (max-width:768px) {
+  header .header .welcome .welcome-text .desc {
+    font-size: 18px;
+    text-align: center;
+    line-height: 26px;
+  }
 }
 header .header .welcome .welcome-text .social {
   width: 27%;
   display: flex;
   justify-content: space-between;
   font-size: 5rem;
+}
+@media (max-width:768px) {
+  header .header .welcome .welcome-text .social {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width:768px) {
+  header .header .welcome .welcome-text .social a {
+    margin: 0 10px;
+  }
 }
 header .header .welcome .welcome-text .social a i {
   color: rgba(0, 0, 0, 0.8);
@@ -76,6 +121,12 @@ header .header .welcome .welcome-text .social a i:hover {
   margin: 0 auto;
   font-size: 1.6rem;
 }
+@media (max-width: 950px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
 .container .section-title {
   font-size: 3rem;
   font-weight: bold;
@@ -85,19 +136,29 @@ header .header .welcome .welcome-text .social a i:hover {
 .container .projects {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .container .projects .project {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   width: 32%;
-  margin: 0 18px 60px 0;
+  margin: 0 0 60px 0;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.3);
   box-shadow: #aaa 5px 10px 10px;
+  border-radius: 6px;
 }
-.container .projects .project:nth-child(3n) {
-  margin-right: 0;
+@media (max-width:768px) {
+  .container .projects .project {
+    width: 47%;
+    margin: 0 0 30px 0;
+  }
+}
+@media (max-width:500px) {
+  .container .projects .project {
+    width: 100%;
+  }
 }
 .container .projects .project img {
   width: 100%;
@@ -115,10 +176,32 @@ header .header .welcome .welcome-text .social a i:hover {
   font-size: 1.6rem;
   font-weight: bold;
   line-height: 2.2rem;
+  margin: 0 0 8px 0;
 }
 .container .projects .project .info .desc {
   font-size: 1.4rem;
   line-height: 2rem;
+}
+@media (max-width:500px) {
+  .container .projects .project .info .desc {
+    margin-bottom: 15px;
+  }
+}
+.container .projects .project .info .stack {
+  padding: 0 0 15px 0;
+  font-size: 11px;
+  letter-spacing: 0.4px;
+}
+.container .projects .project .info .stack span {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid #bba;
+  border-right: 1px solid #bbb;
+  margin: 0 3px 3px 0;
+  padding: 2px 4px;
+}
+.container .projects .project .info .stack span:hover {
+  cursor: pointer;
 }
 .container .projects .project .info a {
   display: flex;
