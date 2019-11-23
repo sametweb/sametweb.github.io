@@ -618,7 +618,6 @@ header .header .welcome .welcome-text .social a i:hover {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-start;
-  height: 100%;
   padding: 0 15px 15px;
 }
 .container .projects .project .info .title {
@@ -656,6 +655,7 @@ header .header .welcome .welcome-text .social a i:hover {
   display: flex;
   justify-content: space-between;
   font-size: 1.5rem;
+  margin-top: auto;
 }
 .container .projects .project .links a {
   display: flex;
