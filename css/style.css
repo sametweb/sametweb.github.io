@@ -664,7 +664,7 @@ header .header .welcome .welcome-text .social a i:hover {
   width: 100%;
   transition: all 0.2s;
   margin-top: auto;
-  padding: 10px 5px 10px 10px;
+  padding: 15px 5px 15px 10px;
 }
 .container .projects .project .links a:first-child {
   background: black;
