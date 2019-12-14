@@ -8,6 +8,7 @@ const social = [
 //prettier-ignore
 const portfolio = [
 //  { title: '', desc: '', imgURL: '', stack: ['React', 'React Router'], repo: '', demo: '' },
+    { title: 'User Onboarding', desc: 'A single page application for general user sign up purposes. Form creation and validation is provided by Formik and Yup.', imgURL: 'images/user-onboarding.png', stack: ['React', 'Formik', 'Yup', 'Semantic UI'], repo: 'https://github.com/sametweb/User-Onboarding', demo: 'https://user-onboardingsm.netlify.com/' },
     { title: 'Team Builder', desc: 'A single page application for managing teams and members of teams.', imgURL: 'images/teambuilder.png', stack: ['React', 'React Router', 'Bootstrap', 'Reactstrap'], repo: 'https://github.com/sametweb/team-builder', demo: 'https://team-buildersm.netlify.com/' },
     { title: 'Apple.com Navigation', desc: 'A navigation that is created with nested routes in React Router.', imgURL: 'images/applenav.png', stack: ['CSS', 'React', 'React Router'], repo: 'https://github.com/sametweb/React-Router-Apple-Nav', demo: 'https://apple-navsm.netlify.com/' },
     { title: 'ilmihal oku Android App', desc: 'Android application version of the ilmihal project. The app is waiting to be approved on Google Play.',  imgURL: 'images/ilmihal-app.png', stack: ['React Native', 'React Router'], repo: 'https://github.com/sametweb/ilmihal-native', demo: 'https://play.google.com/store/apps/details?id=com.oku.ilmihal' },
