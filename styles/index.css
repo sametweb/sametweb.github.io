@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body,
 div,
@@ -140,45 +141,89 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(147, 225, 216, 0.3);
+  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
 }
 
 #root {
-  width: 81rem;
-  height: 81rem;
+  width: 82rem;
+  height: 82rem;
   margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 80px;
+  -webkit-animation: bummer 2s;
+  animation: bummer 1s;
+  -webkit-transform: scale(0, 0);
+  transform: scale(0, 0);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 #root a {
-  color: black;
-  text-decoration: underline dotted;
+  color: #333;
+  text-decoration: none;
+}
+#root a::after {
+  content: "→";
 }
 #root h1 {
+  text-transform: uppercase;
   font-size: 1.8rem;
-  font-weight: bold;
-  padding: 1rem 0.5rem 0;
+  letter-spacing: 0.1rem;
+  margin: 2rem 0 0.5rem 0;
+  padding: 0 1rem;
+  color: #666;
+}
+#root h1 a {
+  color: #666;
+}
+#root h1 a:hover {
+  color: black;
 }
 #root h3 {
-  font-size: 1.4rem;
-  font-style: italic;
-  font-weight: 500;
-  margin-top: 1.1rem;
-  padding: 0 0.5rem;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  margin: 2rem 0 0.5rem 0;
+  padding: 0 1rem;
+  color: #666;
+}
+#root h3 a {
+  color: #333;
+}
+#root h3 a:hover {
+  color: black;
 }
 #root p {
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  padding: 0 0.5rem;
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+  padding: 0 1rem;
 }
 #root .wrapper {
   display: grid;
-  grid-template: repeat(2, 40.35rem)/repeat(10, 7.83rem);
+  grid-template: repeat(2, 40.25rem)/repeat(10, 7.65rem);
+  gap: 0.5rem;
+  border: 0.5rem solid transparent;
   border-radius: 50%;
   overflow: hidden;
-  gap: 0.3rem;
+  box-sizing: border-box;
+}
+#root .wrapper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -0.5rem;
+  /* !importanté */
+  border-radius: inherit;
+  /* !importanté */
+  background: linear-gradient(-45deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
 }
 #root .wrapper .top-left {
   grid-area: 1/1/span 1/span 4;
-  background: rgba(0, 0, 0, 0.3) url(../img/profile.jpg) no-repeat;
+  background: rgba(0, 0, 0, 0.2) url(../img/profile.jpg) no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -193,7 +238,7 @@ body {
 }
 #root .wrapper .top-right {
   grid-area: 1/5/span 1/span 6;
-  background-color: rgba(134, 22, 87, 0.2);
+  background-image: linear-gradient(315deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
 }
 #root .wrapper .top-right .img {
   height: 100%;
@@ -202,15 +247,34 @@ body {
   float: right;
   visibility: hidden;
 }
+#root .wrapper .top-right h3 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  margin: 2rem 0 0.5rem 0;
+  padding-right: 0.2rem;
+}
+#root .wrapper .top-right h3 a {
+  color: #666;
+}
+#root .wrapper .top-right h3 a:hover {
+  color: black;
+}
+#root .wrapper .top-right p {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
 #root .wrapper .bottom-left {
   grid-area: 2/1/span 1/span 6;
-  background-color: rgba(147, 225, 216, 0.3);
+  background-image: linear-gradient(225deg, #b7f8db 0%, #50a7c2 100%);
   text-align: right;
 }
-#root .wrapper .bottom-left p {
-  font-size: 1.4rem;
-  line-height: 2rem;
-  font-style: italic;
+#root .wrapper .bottom-left p span {
+  font-size: 1.6rem;
+  font-family: monospace;
+  font-style: normal;
+  padding: 0.2rem 0.3rem;
+  background: #f1f1f2;
 }
 #root .wrapper .bottom-left .img {
   height: 100%;
@@ -221,7 +285,7 @@ body {
 }
 #root .wrapper .bottom-right {
   grid-area: 2/7/span 1/span 4;
-  background: rgba(251, 216, 127, 0.3);
+  background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
 }
 #root .wrapper .bottom-right .img {
   height: 100%;
@@ -230,14 +294,28 @@ body {
   float: right;
   visibility: hidden;
 }
-#root .wrapper .bottom-right .social {
+#root .wrapper .bottom-right a:after {
+  content: "";
+}
+#root .wrapper .bottom-right a .social {
   margin: 1rem 0.5rem;
   width: 6rem;
   height: 6rem;
 }
-#root .wrapper .bottom-right p {
-  font-size: 1.9rem;
-  line-height: 2.7rem;
+#root .wrapper .bottom-right a .social:hover {
+  transform: scale(1.1);
+  transition: 0.3s all;
+}
+
+@-webkit-keyframes bummer {
+  100% {
+    -webkit-transform: scale(1, 1);
+  }
+}
+@keyframes bummer {
+  100% {
+    transform: scale(1, 1);
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
