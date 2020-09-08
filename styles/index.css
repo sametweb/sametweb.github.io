@@ -144,8 +144,8 @@ body {
 }
 
 #root {
-  width: 600px;
-  height: 600px;
+  width: 81rem;
+  height: 81rem;
   margin: 0 auto;
 }
 #root a {
@@ -171,7 +171,7 @@ body {
 }
 #root .wrapper {
   display: grid;
-  grid-template: repeat(2, 298.5px)/repeat(10, 57.3px);
+  grid-template: repeat(2, 40.35rem)/repeat(10, 7.83rem);
   border-radius: 50%;
   overflow: hidden;
   gap: 0.3rem;
@@ -185,6 +185,7 @@ body {
   background-size: cover;
 }
 #root .wrapper .top-left .img {
+  height: 100%;
   shape-outside: url(../img/top-left.svg);
   shape-image-threshold: 0.5;
   float: left;
@@ -195,6 +196,7 @@ body {
   background-color: rgba(134, 22, 87, 0.2);
 }
 #root .wrapper .top-right .img {
+  height: 100%;
   shape-outside: url(../img/top-right.svg);
   shape-image-threshold: 0.5;
   float: right;
@@ -211,6 +213,7 @@ body {
   font-style: italic;
 }
 #root .wrapper .bottom-left .img {
+  height: 100%;
   shape-outside: url(../img/bottom-left.svg);
   shape-image-threshold: 0.5;
   float: left;
@@ -221,6 +224,7 @@ body {
   background: rgba(251, 216, 127, 0.3);
 }
 #root .wrapper .bottom-right .img {
+  height: 100%;
   shape-outside: url(../img/bottom-right.svg);
   shape-image-threshold: 0.5;
   float: right;
