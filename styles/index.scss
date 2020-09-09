@@ -2,12 +2,46 @@
 
 $rows: 2;
 $cols: 10;
-$gap: 0.5rem;
+$gap: 1rem;
 $boxSide: 81rem;
 $fullWidth: $boxSide - ($cols - 1) * $gap;
 $fullHeight: $boxSide - ($rows - 1) * $gap;
 $rowHeight: $fullHeight / $rows;
 $colWidth: $fullWidth / $cols;
+
+$bodyBgColorful: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+
+$borderColorful: linear-gradient(
+  -45deg,
+  #231557 0%,
+  #44107a 29%,
+  #ff1361 67%,
+  #fff800 100%
+);
+$area2BgColorful: linear-gradient(
+  315deg,
+  lighten(#219ebc, 10%) 0%,
+  lighten(#247ba0, 10%) 40%,
+  lighten(#4cc9f0, 10%) 100%
+);
+$area3BgColorful: linear-gradient(
+  315deg,
+  lighten(#6a994e, 10%) 0%,
+  lighten(#386641, 10%) 60%,
+  lighten(#6a994e, 10%) 100%
+);
+$area4BgColorful: linear-gradient(
+  -60deg,
+  lighten(#ffad85, 10%) 0%,
+  lighten(#ff6842, 10%) 40%,
+  lighten(#ff884d, 10%) 100%
+);
+
+$bodyBgMute: linear-gradient(to right, #16222a 0%, #3a6073 51%, #16222a 100%);
+$borderMute: linear-gradient(150deg, #16222a 0%, #3a6073 100%);
+$area2BgMute: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+$area3BgMute: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+$area4BgMute: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 
 html {
   height: 100%;
@@ -21,12 +55,56 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(
-    to top,
-    #f3e7e9 0%,
-    #e3eeff 99%,
-    #e3eeff 100%
-  ); // background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+  background-image: $bodyBgColorful;
+  animation: rotation 1s linear alternate;
+  &.mute {
+    background: $bodyBgMute;
+
+    #root {
+      h1 {
+        color: #16222a;
+        text-shadow: lighten(#16222a, 50%) 0 0 3px;
+      }
+      h3 {
+        color: #16222a;
+        text-shadow: lighten(#16222a, 50%) 0 0 1px;
+      }
+
+      .wrapper {
+        &:before {
+          background: $borderMute;
+        }
+        .top-right {
+          background-image: $area2BgMute;
+          p {
+            span {
+              background: lighten(#16222a, 15%);
+              color: white;
+            }
+          }
+        }
+        .bottom-left {
+          background-image: $area3BgMute;
+          h3 {
+            a {
+              color: #16222a;
+              text-shadow: lighten(#16222a, 30%) 0 0 1px;
+              &:hover {
+                text-shadow: none;
+              }
+            }
+          }
+        }
+        .bottom-right {
+          background-image: $area4BgMute;
+          h1 {
+            color: #16222a;
+            text-shadow: lighten(#16222a, 10%) 0 0 2px;
+          }
+        }
+      }
+    }
+  }
 }
 
 #root {
@@ -35,13 +113,12 @@ body {
   margin: 0 auto;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 80px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 50px;
   -webkit-animation: bummer 2s;
   animation: bummer 1s;
   -webkit-transform: scale(0, 0);
   transform: scale(0, 0);
   -webkit-animation-fill-mode: forwards;
-
   animation-fill-mode: forwards;
 
   a {
@@ -58,8 +135,8 @@ body {
     letter-spacing: 0.1rem;
     margin: 2rem 0 0.5rem 0;
     padding: 0 1rem;
-    color: #666;
-
+    color: white;
+    text-shadow: black 0 0 4px;
     a {
       color: #666;
       &:hover {
@@ -74,8 +151,8 @@ body {
     letter-spacing: 0.1rem;
     margin: 2rem 0 0.5rem 0;
     padding: 0 1rem;
-    color: #666;
-
+    color: #fff;
+    text-shadow: black 0 0 4px;
     a {
       color: #333;
       &:hover {
@@ -108,13 +185,7 @@ body {
       z-index: -1;
       margin: -$gap; /* !importanté */
       border-radius: inherit; /* !importanté */
-      background: linear-gradient(
-        -45deg,
-        #231557 0%,
-        #44107a 29%,
-        #ff1361 67%,
-        #fff800 100%
-      );
+      background: $borderColorful;
     }
 
     .top-left {
@@ -137,12 +208,7 @@ body {
 
     .top-right {
       grid-area: 1 / 5 / span 1 / span 6;
-      background-image: linear-gradient(
-        315deg,
-        #ff9a9e 0%,
-        #fad0c4 99%,
-        #fad0c4 100%
-      );
+      background-image: $area2BgColorful;
       .img {
         height: 100%;
         shape-outside: url(../img/top-right.svg);
@@ -150,29 +216,10 @@ body {
         float: right;
         visibility: hidden;
       }
-      h3 {
-        text-transform: uppercase;
-        font-size: 1.3rem;
-        letter-spacing: 0.1rem;
-        margin: 2rem 0 0.5rem 0;
-        padding-right: 0.2rem;
-        a {
-          color: #666;
-          &:hover {
-            color: black;
-          }
-        }
+      h1 {
+        margin-top: 4rem;
+        font-size: 2.2rem;
       }
-      p {
-        font-size: 1.4rem;
-        line-height: 1.7rem;
-      }
-    }
-
-    .bottom-left {
-      grid-area: 2 / 1 / span 1 / span 6;
-      background-image: linear-gradient(225deg, #b7f8db 0%, #50a7c2 100%);
-      text-align: right;
       p {
         span {
           font-size: 1.6rem;
@@ -182,6 +229,32 @@ body {
           background: #f1f1f2;
         }
       }
+    }
+
+    .bottom-left {
+      grid-area: 2 / 1 / span 1 / span 6;
+
+      background-image: $area3BgColorful;
+      text-align: right;
+      h3 {
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        letter-spacing: 0.1rem;
+        margin: 2rem 0 0.5rem 0;
+        padding-right: 0.2rem;
+        a {
+          color: #fff;
+          text-shadow: #000 0px 0px 2px;
+          &:hover {
+            color: black;
+          }
+        }
+      }
+      p {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+      }
+
       .img {
         height: 100%;
         shape-outside: url(../img/bottom-left.svg);
@@ -193,13 +266,21 @@ body {
 
     .bottom-right {
       grid-area: 2 / 7 / span 1 / span 4;
-      background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
+
+      background-image: $area4BgColorful;
+      transition: 0.5s all;
+      &:hover {
+        background-position: right center;
+      }
       .img {
         height: 100%;
         shape-outside: url(../img/bottom-right.svg);
         shape-image-threshold: 0.5;
         float: right;
         visibility: hidden;
+      }
+      h1 {
+        text-shadow: #333 0 0 3px;
       }
       a {
         &:after {
@@ -216,6 +297,18 @@ body {
         }
       }
     }
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotateY(0deg);
+  }
+  70% {
+    transform: rotateY(540deg);
+  }
+  100% {
+    transform: rotateY(720deg);
   }
 }
 
