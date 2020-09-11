@@ -184,8 +184,8 @@ body.mute #root .wrapper .bottom-right h1 {
 }
 
 #root {
-  width: 83rem;
-  height: 83rem;
+  width: 72rem;
+  height: 72rem;
   margin: 0 auto;
   border-radius: 50%;
   overflow: hidden;
@@ -197,6 +197,14 @@ body.mute #root .wrapper .bottom-right h1 {
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
+@media (max-width: 768px) {
+  #root {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    overflow: unset;
+  }
+}
 #root a {
   color: #333;
   text-decoration: none;
@@ -206,7 +214,6 @@ body.mute #root .wrapper .bottom-right h1 {
 }
 #root h1 {
   text-transform: uppercase;
-  font-size: 1.8rem;
   letter-spacing: 0.1rem;
   margin: 2rem 0 0.5rem 0;
   padding: 0 1rem;
@@ -235,18 +242,25 @@ body.mute #root .wrapper .bottom-right h1 {
   color: black;
 }
 #root p {
-  font-size: 1.7rem;
-  line-height: 2.5rem;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
   padding: 0 1rem;
 }
 #root .wrapper {
   display: grid;
-  grid-template: repeat(2, 40rem)/repeat(10, 7.2rem);
+  grid-template: repeat(2, 34.5rem)/repeat(10, 6.1rem);
   gap: 1rem;
   border: 1rem solid transparent;
   border-radius: 50%;
   overflow: hidden;
   box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  #root .wrapper {
+    grid-template: auto auto auto auto/100%;
+    border-radius: 0;
+    overflow: unset;
+  }
 }
 #root .wrapper:before {
   content: "";
@@ -270,6 +284,17 @@ body.mute #root .wrapper .bottom-right h1 {
   -o-background-size: cover;
   background-size: cover;
 }
+@media (max-width: 768px) {
+  #root .wrapper .top-left {
+    height: 25vh;
+    grid-area: 1/1/span 1/span 1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 0% 30%;
+  }
+}
 #root .wrapper .top-left .img {
   height: 100%;
   shape-outside: url(../img/top-left.svg);
@@ -277,9 +302,19 @@ body.mute #root .wrapper .bottom-right h1 {
   float: left;
   visibility: hidden;
 }
+@media (max-width: 768px) {
+  #root .wrapper .top-left .img {
+    display: none;
+  }
+}
 #root .wrapper .top-right {
   grid-area: 1/5/span 1/span 6;
   background-image: linear-gradient(315deg, #35bbdb 0%, #2d9bca 40%, #7bd7f4 100%);
+}
+@media (max-width: 768px) {
+  #root .wrapper .top-right {
+    grid-area: 2/1/span 1/span 1;
+  }
 }
 #root .wrapper .top-right .img {
   height: 100%;
@@ -288,9 +323,19 @@ body.mute #root .wrapper .bottom-right h1 {
   float: right;
   visibility: hidden;
 }
+@media (max-width: 768px) {
+  #root .wrapper .top-right .img {
+    display: none;
+  }
+}
 #root .wrapper .top-right h1 {
   margin-top: 4rem;
-  font-size: 2.2rem;
+  font-size: 2rem;
+}
+@media (max-width: 768px) {
+  #root .wrapper .top-right p.tags {
+    margin-bottom: 2rem;
+  }
 }
 #root .wrapper .top-right p span {
   font-size: 1.6rem;
@@ -304,11 +349,14 @@ body.mute #root .wrapper .bottom-right h1 {
   background-image: linear-gradient(315deg, #84b268 0%, #4a8756 60%, #84b268 100%);
   text-align: right;
 }
+@media (max-width: 768px) {
+  #root .wrapper .bottom-left {
+    grid-area: 3/1/span 1/span 1;
+  }
+}
 #root .wrapper .bottom-left h3 {
-  text-transform: uppercase;
   font-size: 1.3rem;
-  letter-spacing: 0.1rem;
-  margin: 2rem 0 0.5rem 0;
+  margin: 1rem 0 0.3rem 0;
   padding-right: 0.2rem;
 }
 #root .wrapper .bottom-left h3 a {
@@ -319,7 +367,7 @@ body.mute #root .wrapper .bottom-right h1 {
   color: black;
 }
 #root .wrapper .bottom-left p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.7rem;
 }
 #root .wrapper .bottom-left .img {
@@ -329,10 +377,20 @@ body.mute #root .wrapper .bottom-right h1 {
   float: left;
   visibility: hidden;
 }
+@media (max-width: 768px) {
+  #root .wrapper .bottom-left .img {
+    display: none;
+  }
+}
 #root .wrapper .bottom-right {
   grid-area: 2/7/span 1/span 4;
   background-image: linear-gradient(-60deg, #ffcfb8 0%, #ff9175 40%, #ffaa80 100%);
   transition: 0.5s all;
+}
+@media (max-width: 768px) {
+  #root .wrapper .bottom-right {
+    grid-area: 4/1/span 1/span 1;
+  }
 }
 #root .wrapper .bottom-right:hover {
   background-position: right center;
@@ -344,8 +402,14 @@ body.mute #root .wrapper .bottom-right h1 {
   float: right;
   visibility: hidden;
 }
+@media (max-width: 768px) {
+  #root .wrapper .bottom-right .img {
+    display: none;
+  }
+}
 #root .wrapper .bottom-right h1 {
-  text-shadow: #333 0 0 3px;
+  font-size: 2rem;
+  text-shadow: #000 0 0 2px;
 }
 #root .wrapper .bottom-right a:after {
   content: "";
